@@ -38,7 +38,7 @@ export default class Tractlocation extends React.Component {
         return <div><Season lat={this.state.lat}/></div>;
     }
     else{
-    return <Spinner/>;
+    return <Spinner message="Please accept the location request" />;
     }
   }
 }
