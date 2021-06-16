@@ -6,4 +6,4 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./app";
 
-ReactDom.render(<App/>, document.getElementById("root"));
+ReactDom.render(<App/>, document.querySelector('#root'));
