@@ -1,5 +1,6 @@
 import React from "react";
 import Season from "./seasondisplay"
+import Spinner from "./spinner";
 
 export default class Tractlocation extends React.Component {
   state = {
@@ -36,7 +37,8 @@ export default class Tractlocation extends React.Component {
     if (!this.state.errormeaasge && this.state.lat) {
         return <div><Season lat={this.state.lat}/></div>;
     }
-    
-    return <div>loading!</div>;
+    else{
+    return <Spinner/>;
+    }
   }
 }
