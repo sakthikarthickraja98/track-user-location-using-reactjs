@@ -29,16 +29,26 @@ export default class Tractlocation extends React.Component {
       );
   } */
 
-  render() {
-    if (!this.state.lat && this.state.errormessage) {
-        return <div>Error:{this.state.errormessage}</div>;
-    }
 
-    if (!this.state.errormeaasge && this.state.lat) {
-        return <div><Season lat={this.state.lat}/></div>;
-    }
-    else{
-    return <Spinner message="Please accept the location request" />;
-    }
+  renderContent(){
+    if (!this.state.lat && this.state.errormessage) {
+      return <div>Error:{this.state.errormessage}</div>;
+  }
+
+  if (!this.state.errormeaasge && this.state.lat) {
+      return <div><Season lat={this.state.lat}/></div>;
+  }
+  else{
+  return <Spinner message="Please accept the location request" />;
+  }
+  }
+
+  render() {
+   return (
+     <div className="border red">
+       {this.renderContent()}
+     </div>
+   )
   }
 }
+ 
