@@ -1,6 +1,7 @@
 import React from "react";
-import Season from "./seasondisplay"
+import Season from "./seasondisplay";
 import Spinner from "./spinner";
+import Error from "./error";
 
 export default class Tractlocation extends React.Component {
   state = {
@@ -32,7 +33,7 @@ export default class Tractlocation extends React.Component {
 
   renderContent(){
     if (!this.state.lat && this.state.errormessage) {
-      return <div>Error:{this.state.errormessage}</div>;
+      return <div><Error/></div>;
   }
 
   if (!this.state.errormeaasge && this.state.lat) {
